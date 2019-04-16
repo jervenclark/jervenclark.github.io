@@ -2,3 +2,4 @@ title: Jerven Clark Chua
 logo: /assets/img/logo.png
 description: .
 theme: jekyll-theme-minimal
+exclude: scripts

@@ -1,10 +1,9 @@
 ---
 layout: default
-title:  "Welcome to Jekyll!"
+title:  "Hello, World!"
+categories: [programming, basic]
 ---
 
-# Welcome
+# Hello, World
 
-**Hello world**, this is my first Jekyll blog post.
-
-I hope you like it!
+This is an obligatory **Hello world**: post to prove a concept.
