@@ -1,1 +1,1 @@
-touch "${PWD}/_postsg/$(date +%Y-%m-%d)-$*.md"
+touch "${PWD}/_posts/$(date +%Y-%m-%d)-$*.md"
