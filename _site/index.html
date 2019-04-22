@@ -52,125 +52,23 @@
 
       
 <article>
+    <time datetime="2019-04-22">22 April 2019</time>
     <h2>
       <a href="/programming/monitoring/prometheus/grafana/docker/2019/04/22/monitoring-docker-with-prometheus.html">
-        Monitoring Docker with Prometheus and Grafana
+      Monitoring Docker with Prometheus and Grafana
       </a>
     </h2>
-    <time datetime="2019-04-22">22 April 2019</time>
-    <h1 id="monitoring-docker-with-prometheus-and-grafana">Monitoring Docker with Prometheus and Grafana</h1>
-
-<hr />
-
-<ul>
-  <li><a href="#exposing-docker-metrics">Exposing Docker metrics</a></li>
-  <li><a href="#configuring-prometheus">Configuring Prometheus</a></li>
-  <li><a href="#querying-prometheus">Querying Prometheus</a></li>
-  <li><a href="#configuring-grafana">Configuring Grafana</a></li>
-</ul>
-
-<hr />
-
-<h2 id="exposing-docker-metrics">Exposing Docker metrics</h2>
-
-<p>Configuring <a href="https://www.docker.com">Docker</a> as a Prometheus <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> target is very straight forward. We can easily achieve this by enabling the <code class="highlighter-rouge">experimental</code> flag and exposing a <code class="highlighter-rouge">metric-address</code><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</p>
-
-<p>Append the following keys to <code class="highlighter-rouge">/etc/docker/daemon.json</code>. If it doesn’t exist, create it. This tells Docker to expose its metrics on port 9323.</p>
-
-<p><em>/etc/docker/daemon.json:</em></p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"metrics-addr"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1:9323"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"experimental"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<p>After doing so, restart the  daemon:</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart docker.service
-</code></pre></div></div>
-
-<p>As of the time of writing, Docker can only monitor and expose metrics of itself. It cannot monitor running applications yet.</p>
-
-<hr />
-
-<h2 id="configuring-prometheus">Configuring Prometheus</h2>
-
-<p>To have Prometheus scrape Docker, we must first get a copy of prometheus and since we are using Docker anyway, let’s run one in a container.</p>
-
-<p>Let’s first create a docker compose file with the following content:</p>
-
-<p><em>docker-compose.yml</em></p>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.4'</span>
-<span class="na">services</span><span class="pi">:</span>
-  <span class="na">scraper</span><span class="pi">:</span>
-    <span class="na">image</span><span class="pi">:</span> <span class="s">prom/prometheus</span>
-    <span class="na">container_name</span><span class="pi">:</span> <span class="s">prometheus</span>
-    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
-    <span class="na">ports</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">9090:9090</span>
-    <span class="na">volumes</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">./prometheus/:/etc/prometheus/</span>
-</code></pre></div></div>
-
-<p>We also need to create a Prometheus config telling it to scrape Docker metrics. For more configuration options, you can refer to their <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">documentation</a>.</p>
-
-<p><em>prometheus/prometheus.yml</em></p>
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">global</span><span class="pi">:</span>
-  <span class="na">scrape_interval</span><span class="pi">:</span>     <span class="s">15s</span>
-  <span class="na">evaluation_interval</span><span class="pi">:</span> <span class="s">15s</span>
-  <span class="na">external_labels</span><span class="pi">:</span>
-      <span class="na">monitor</span><span class="pi">:</span> <span class="s1">'</span><span class="s">codelab-monitor'</span>
-
-<span class="na">scrape_configs</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">prometheus'</span>
-    <span class="na">static_configs</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">localhost:9090'</span><span class="pi">]</span>
-
-  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">docker'</span>
-    <span class="na">static_configs</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">localhost:9323'</span><span class="pi">]</span>
-</code></pre></div></div>
-
-<p>This will launch a Prometheus service on port 9090.</p>
-
-<hr />
-
-<h2 id="querying-prometheus">Querying Prometheus</h2>
-
-<p>Verify that you Prometheus can scrape the exposed metrics by navigating to <code class="highlighter-rouge">http://localhost:9090/targets</code>.</p>
-
-<p><img src="/assets/img/prometheus-targets.png" alt="alt text" title="Logo Title Text 1" /></p>
-
-<hr />
-
-<h2 id="configuring-grafana">Configuring Grafana</h2>
-
-<hr />
-
-<h2 id="notes">Notes:</h2>
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="https://prometheus.io/">Prometheus</a> is an open-source monitoring and alerting toolit. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>Warning: The available metrics and the names of those metrics are in active development and may change at any time. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
+    <hr />
   </article>
 
 <article>
+    <time datetime="2019-03-15">15 March 2019</time>
     <h2>
       <a href="/programming/basic/2019/03/15/hello-world.html">
-        Hello, World!
+      Hello, World!
       </a>
     </h2>
-    <time datetime="2019-03-15">15 March 2019</time>
-    <h1 id="hello-world">Hello, World</h1>
-
-<p>This is an obligatory <strong>Hello world</strong>: post to prove a concept.</p>
-
+    <hr />
   </article>
 
 
