@@ -68,10 +68,23 @@ AWS, Google Cloud, Docker, Terraform, Kubernetes, Ansible, Chef, Puppet, Apache 
 
 ### Education
 
-- MSU - Iligan Institute of Technology / Computer Engineering
+- MSU - Iligan Institute of Technology / Computer Engineering <br>
 JUNE 2008 - MARCH 2012,  ILIGAN CITY
-- Philippine Science High School - CMC
+- Philippine Science High School - CMC <br>
 JUNE 2004 - MARCH 2008,  LANAO DEL NORTE
+
+### Certification
+
+- Analytic SQL for Developers <br>
+Oracle, Apr 2019
+- CRUD Operations using cx_Oracle and Python <br>
+Oracle, Apr 2019
+- Database for Developers: Foundations <br>
+Oracle, Apr 2019
+- PL/SQL for Developers <br>
+Oracle, Apr 2019
+- Python 101 for Data Science <br>
+IBM, Apr 2019
 
 ### Interests
 
