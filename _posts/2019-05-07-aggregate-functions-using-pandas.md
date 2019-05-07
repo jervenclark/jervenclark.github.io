@@ -48,11 +48,14 @@ It describes the name, population, growth rate density as well as the continent 
 ```python
 import pandas as pd
 population = pd.read_csv('population.csv', keep_default_na=False)
+
+# filter by continent code
+asia = population['Code'] == 'AS'
 ```
 
 **What is the total population of Asia?**
 ```python
-asia_population = population[population['Code'] == 'AS']["Population"].sum()
+asia_population = population[asia]["Population"].sum()
 print(f'Total Population in Asia: {asia_population: ,}')
 
 ```
@@ -63,10 +66,12 @@ Total Population in Asia:  11,156,136,151.00
 
 **What region has the highest growth rate and by what percent?***
 ```python
-asia_growth_rate = population[population['Code'] == 'AS'][['Name', 'Growth Rate']].max()
-print(f'The most populated regions is {asia_growth_rate["Name"]} with a population of {asia_growth_rate['Growth Rate']: ,.2f}%')
+asia_growth_rate = population[asia][['Name', 'Growth Rate']].max()
+print(f'The most populated regions is {asia_growth_rate["Name"]}')
+print(f'With a rate of {asia_growth_rate["Growth Rate"]: ,.2f}%')
 
 ```
 ```
-
+The most populated regions is Western Asia
+With a population of  1.68%
 ```
