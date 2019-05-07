@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Monitoring Docker with Prometheus and Grafana"
-categories: [programming, monitoring, prometheus, grafana, docker]
+categories: [ docker, grafana, monitoring, programming, prometheus ]
 ---
 
 
