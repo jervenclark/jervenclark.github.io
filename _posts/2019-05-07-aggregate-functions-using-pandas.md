@@ -1,6 +1,6 @@
 ---
 layout: default
-titla: "Aggregate Functions using Pandas"
+title: "Aggregate Functions using Pandas"
 categories: "[data science, pandas, python]"
 ---
 
