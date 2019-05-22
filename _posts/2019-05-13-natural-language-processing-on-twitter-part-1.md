@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Natural Language Processing on Twitter - Part 1"
-categories: "[data science, pandas, python, nltk, tweepy]"
+categories: [data-science, pandas, python, nltk, tweepy]
 ---
 
 # Natural Language Processing on Twitter - Part 1

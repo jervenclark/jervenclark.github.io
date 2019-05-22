@@ -1,6 +1,6 @@
 title: Jerven Clark Chua
 logo: /assets/img/logo.png
 description: Software Engineer
-theme: jekyll-theme-minimal
+theme: jekyll-theme-midnight
 exclude:
   - scripts

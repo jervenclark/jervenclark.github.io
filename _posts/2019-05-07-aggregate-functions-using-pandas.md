@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Aggregate Functions using Pandas"
-categories: "[data science, pandas, python]"
+categories: [data-science, pandas, python]
 ---
 
 # Aggregate Functions using Pandas
