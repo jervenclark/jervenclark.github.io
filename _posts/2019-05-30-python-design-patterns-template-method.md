@@ -6,16 +6,16 @@ categories: [behavioral-pattern, design-pattern, python, object-oriented-program
 
 # Python Design Patterns: Template Method
 
-<br> 
+<br>
 Arguably, the template method is the most common design pattern in object oriented programming. It is a behavioral pattern that defines the program skeleton while letting subclasses override some methods without changing the algorithm's structure.
 
-<br> 
+<br>
 
 ## Code
 
 To successfully implement the template method, first examine the algorithm and decide which steps are standard and which steps are peculiar to each subclass. Let's take for instance: foraging. By definition, it means searching actively for provisions or food - which involves some mode of movement and culminates in the consumption of the food found.
 
-As a specific use case, let's examine fowl foraging. 
+As a specific use case, let's examine fowl foraging.
 
 ```python
 def forage(fowl: Fowl):
@@ -32,22 +32,28 @@ class Fowl(object):
     def __init__(self):
         self.food = False;
         self.moves = 0
-        
+
     def hi(self):
         print(f'Hi! I\'m a {self.__class__.__name__}')
-        
+
     def move(self):
         from random import randint
         food = randint(0,2) % 2
         self.moves += 1
         self.food = food
-        
+
     def eat(self):
         print(f'At last! I found food after {self.moves} steps')
-        
+
     def lay(self):
         from random import randint
         print(f'I successfully laid {randint(5, 15)} eggs')
+
+    def forage(self):
+        self.hi()
+        while not self.food:
+            self.move()
+        self.eat()
 ```
 
 Our `hi` method introduces us to the fowl doing the foraging. The `move` method randomly determines if there is any food found as well as keeps track of the number of steps done by our fowl. Lastly, `eat` simply tells us we are consuming our food after n steps.
@@ -60,7 +66,8 @@ class Chicken(Fowl):
 Our subclass `Chicken` inherits all the methods available from `Fowl` without any customization. If we pass it to our `forage()` function, it would perform without any hiccups.
 
 ```python
-forage(Chicken())
+chicken = Chicken()
+chicken.forage()
 ```
 
 And an expected result:
@@ -78,7 +85,7 @@ We will be defining a new method `quack()` which will be called everytime the mo
 class Duck(Fowl):
     def quack(self):
         print('I say quack quack quack because I\'m a Duck!')
-        
+
     def move(self):
         self.quack()
         super().move()
@@ -87,7 +94,8 @@ class Duck(Fowl):
 And again, passing this to our `forage()` function:
 
 ```python
-forage(Duck())
+duck = Duck()
+duck.forage()
 ```
 
 We get something like:
