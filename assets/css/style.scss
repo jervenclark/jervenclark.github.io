@@ -1,0 +1,19 @@
+---
+---
+
+@import "jekyll-theme-midnight";
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans&display=swap');
+
+body {
+    font: 14px/1.5 "Fira Sans";
+}
+
+pre, code, kbd, samp, time, .mono {
+    font-family: "Fira Mono", monospace;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fira Sans", serif;
+}
