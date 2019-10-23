@@ -38,9 +38,9 @@ We can see that first two numbers in the sequence are special cases because neit
 
 ```python
 def fib(n: int) -> int:
-  if n < 2:
-    return 1
-  return fib(n - 1) + fib(n - 2)
+    if n < 2:
+        return 1
+    return fib(n - 1) + fib(n - 2)
 ```
 
 This kind of approach is good when you are calling very small values of n. However, if n starts to grow, the number of calls also starts to grow. Take for instance `fib(4)`. To calculate the result, you need to call the function a total of 9 times. For the 5th element 15 calls, 177 calls to compute 10th and 21891 calls to compute 20th.
@@ -55,9 +55,9 @@ from typing import Dict
 memo: Dict[int, int] = {0: 0, 1: 1}
 
 def fib(n: int) -> int:
-  if n not in memo:
-    memo[n] = fib(n-1) + fib(n-2)
-  return memo[n]
+    if n not in memo:
+        memo[n] = fib(n-1) + fib(n-2)
+    return memo[n]
 ```
 
 This strategy significantly decreases the number of calls. For instance, it will only call the function 39 times for `fib(20)` as opposed to 21,891 times using plain recursion. And since memo is prefilled with 0 and 1, it saves us the complexity of another if statement.
@@ -73,7 +73,7 @@ from functools import lru_cache
 
 @lru_cache(maxsize=None)
 def fib(n: int) -> int:
-  if n < 2:
-    return 1
-  return fib(n - 1) + fib(n - 2)
+    if n < 2:
+        return 1
+    return fib(n - 1) + fib(n - 2)
 ```
