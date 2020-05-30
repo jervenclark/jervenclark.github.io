@@ -21,7 +21,7 @@ code {
 
 // Codeblock Theme
 pre.highlight {
-  margin: 0 -27px;
+  margin: 0;
   @include media-query($on-mobile) {
     margin: 0 calc(51% - 51vw);
     padding-left: 20px;
@@ -39,6 +39,8 @@ pre.highlight {
     line-height: 1.5;
     display: block;
     border: 0;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px
   }
 }
 
