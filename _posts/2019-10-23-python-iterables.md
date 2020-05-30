@@ -3,7 +3,9 @@ title: "Python Iterables"
 date: 2019-10-23 20:40:34 +08:00
 modified: 2019-10-23 20:40:34 +08:00
 tags: [python, basics, generator]
-description: 
+description:
+series:
+archived: true
 ---
 
 # Python Iterables

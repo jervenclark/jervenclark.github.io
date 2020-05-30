@@ -49,10 +49,12 @@ jekyll_compose:
     modified:
     tags: []
     description:
+    archived: false
   draft_default_front_matter:
     modified:
     tags: []
     description:
+    archived: false
 
 # Build settings
 sass:

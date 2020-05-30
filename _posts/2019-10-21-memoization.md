@@ -3,13 +3,10 @@ title: "Memoization"
 date: 2019-10-21 17:40:38 +08:00
 modified: 2019-10-21 17:40:38 +08:00
 tags: [python, optimization]
-description: 
+description:
+series:
+archived: true
 ---
-
-# Memoization
-
-<br>
-
 Memoization is a technique in optimization closely related to caching where execution time is sped up by storing results of expensive function calls and returning the cached results when the same input occur again. The set of remembered associations may be a fixed-size set controlled by a replacement algorithm or a fixed set, depending on the nature of the function and its use.
 
 A function can only be memoized, however, if it is referentially transparent. That is, only if the calling function has exactly the same effect as replacing that function call with its return value.

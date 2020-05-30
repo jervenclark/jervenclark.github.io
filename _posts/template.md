@@ -4,6 +4,5 @@ date: DATETIME
 modified: DATETIME
 tags: [TAGS]
 description: DESC
+series: SERIES
 ---
-
-# TITLE

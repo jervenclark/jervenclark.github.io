@@ -3,7 +3,9 @@ title: "Monitoring Docker with Prometheus and Grafana"
 date: 2019-04-22 17:14:15 +08:00
 modified: 2019-04-22 17:14:15 +08:00
 tags: [docker, grafana, monitoring, programming, prometheus]
-description: 
+description:
+series:
+archived: true
 ---
 
 # Monitoring Docker with Prometheus and Grafana

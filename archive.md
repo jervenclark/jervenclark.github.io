@@ -1,11 +1,13 @@
 ---
-layout: default
-home: true
+title: Archive
+permalink: /archive/
+layout: page
+comments: false
 ---
 
-<h4 class="posts-item-note">Recent Posts</h4>
+<h4 class="posts-item-note">Archived Posts</h4>
 {% for post in site.posts %}
-{% if post.archived == false %}
+{% if post.archived %}
 <article class="post-item">
     <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
     <h4 class="post-item-title">
@@ -13,4 +15,5 @@ home: true
     </h4>
 </article>
 {% endif %}
+
 {% endfor %}
