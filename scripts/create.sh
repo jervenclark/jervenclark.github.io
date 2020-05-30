@@ -1,6 +1,6 @@
 #!/bin/sh
 
-while getopts ":t:a:d:" opt; do
+while getopts ":t:a:d:s:" opt; do
     case $opt in
         t) title=$(sed -E 's/(\s+)/ /g' <<< "$OPTARG")
            ;;

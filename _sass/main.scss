@@ -68,5 +68,7 @@ $on-widescreen: 1152px;
 
 .seriesNote {
     padding: 16px;
-    border: 2px solid $dark-text-link-blue;
+    background-color: #1a1b21;
+    border-right: 2px solid $dark-text-link-blue;
+    margin-bottom: 30px
 }

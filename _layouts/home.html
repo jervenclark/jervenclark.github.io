@@ -5,7 +5,7 @@ home: true
 
 <h4 class="posts-item-note">Recent Posts</h4>
 {% for post in site.posts %}
-{% if post.archived == false %}
+{% if post.archived != true %}
 <article class="post-item">
     <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
     <h4 class="post-item-title">

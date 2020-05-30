@@ -44,13 +44,13 @@ layout: compress
           {% endif %}
         </header>
 
-        <div class="page-content" itemprop="articleBody">     
+        <div class="page-content" itemprop="articleBody">
             {% if page.series %}
             <div class="seriesNote">
                 <div>
                     {% assign count = '0' %}
                     {% assign idx = '0' %}
-                    {% for post in site.posts %}
+                    {% for post in site.posts reversed %}
                     {% if post.series == page.series %}
                     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
                     {% if post.url == page.url %}
@@ -63,7 +63,7 @@ layout: compress
                     </p>
                     <ul>
                         {% assign count = '0' %}
-                        {% for post in site.posts %}
+                        {% for post in site.posts reversed %}
                         {% if post.series == page.series %}
                         {% capture count %}{{ count | plus: '1' }}{% endcapture %}
                         <li>Part {{ count }} - 
@@ -79,11 +79,11 @@ layout: compress
                 </div>
             </div>
             {% endif %}
-            
+
 
           {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=1 h_max=4 %}
           {% if page.tweet %}
-          <p>Comments this article on 
+          <p>Comments this article onx
             <a href="https://twitter.com/{{site.username}}/status/{{page.tweet}}">Twitter</a>.
           </p>
           {% endif %}
