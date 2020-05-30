@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "Python Iterables"
-categories: [python, basics, generator]
+date: 2019-10-23 20:40:34 +08:00
+modified: 2019-10-23 20:40:34 +08:00
+tags: [python, basics, generator]
+description: 
 ---
 
 # Python Iterables

@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "CIDR Network Notation"
-categories: [networking, cidr]
+date: 2019-05-29 15:22:04 +08:00
+modified: 2019-05-29 15:22:04 +08:00
+tags: [networking, cidr]
+description: 
 ---
 
 # CIDR Network Notation

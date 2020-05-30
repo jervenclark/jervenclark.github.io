@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "Memoization"
-categories: [python, optimization]
+date: 2019-10-21 17:40:38 +08:00
+modified: 2019-10-21 17:40:38 +08:00
+tags: [python, optimization]
+description: 
 ---
 
 # Memoization

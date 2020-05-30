@@ -7,6 +7,5 @@ services:
       - 4000:4000
     volumes:
       - ./:/home/developer/workspace
-    command: bundle exec jekyll serve -H 0.0.0.0
 
       

@@ -1,9 +1,10 @@
 ---
-layout: default
 title: "Monitoring Docker with Prometheus and Grafana"
-categories: [docker, grafana, monitoring, programming, prometheus]
+date: 2019-04-22 17:14:15 +08:00
+modified: 2019-04-22 17:14:15 +08:00
+tags: [docker, grafana, monitoring, programming, prometheus]
+description: 
 ---
-
 
 # Monitoring Docker with Prometheus and Grafana
 

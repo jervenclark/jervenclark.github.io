@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "Python Design Patterns: Template Method"
-categories: [behavioral-pattern, design-pattern, python, object-oriented-programming, oop]
+date: 2019-05-30 18:08:15 +08:00
+modified: 2019-05-30 18:08:15 +08:00
+tags: [behavioral-pattern, design-pattern, python, object-oriented-programming, oop]
+description: 
 ---
 
 # Python Design Patterns: Template Method
