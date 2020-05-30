@@ -1,0 +1,12 @@
+version: "3.2"
+
+services:
+  jekyll:
+    image: jervenclark/jekyll:latest
+    ports:
+      - 4000:4000
+    volumes:
+      - ./:/home/developer/workspace
+    command: bundle exec jekyll serve -H 0.0.0.0
+
+      
