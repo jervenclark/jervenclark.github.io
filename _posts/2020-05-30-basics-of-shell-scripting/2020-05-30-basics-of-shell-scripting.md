@@ -72,7 +72,14 @@ The following table lists a few basic Linux commands:
 
 ## Writing our first script
 
-A shell program, or shell script, is a collection of a series of commands for a UNIX shell. No separate compiler is required to execute these scripts as the shell itself interprets and executes each command one line at a time.
+A shell program, or shell script, is a collection of a series of commands for a UNIX shell. No separate compiler is required to execute these scripts as the shell itself interprets and executes each command one line at a time. 
+
+It has serveral advantages over compiled programs such as:
+
+- easy to write and run
+- easy to start since no additional setup tools are needed
+- very handy and convenient saving development time
+- easy to debug
 
 Let's start by creating a new file called `hello.sh`
 
@@ -104,6 +111,15 @@ $ ./hello.sh
 ```
 
 The first way is pretty straightforward - we are essentially telling bash to execute the file hello.sh. The second way involves adding an executable flag to the hello.sh then running it as an executable file.
+
+## When not to use a script?
+
+Given the many advantages of a shell script, there are also a few limitations that we should keep in mind.
+
+- every line in a shell script creates its own process in the operating system which makes it slower than compiled programs
+- not very suitable for heavy math calculations
+- problems with portability
+- manipulating and generating graphics is very limited, usually we can only use printable symbols as graphics.
 
 ## Notes
 [^1]: a **device file** is an interface to a device driver that appears in a file system as if it were an ordinary file
