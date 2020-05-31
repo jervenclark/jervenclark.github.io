@@ -7,5 +7,3 @@ services:
       - 4000:4000
     volumes:
       - ./:/home/developer/workspace
-
-      

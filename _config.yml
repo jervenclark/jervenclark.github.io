@@ -51,12 +51,14 @@ jekyll_compose:
     series:
     description:
     archived: false
+    usemathjax: false
   draft_default_front_matter:
     modified:
     tags: []
     series:
     description:
     archived: false
+    usemathjax: false
 
 # Build settings
 sass:

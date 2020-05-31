@@ -21,5 +21,6 @@ time=$(date '+%H:%M:%S %z')
 datetime="$date $time"
 permalink=$(sed -E "s/(\s+)/-/g;s/(.*)/\L\1/" <<< $title)
 
+mkdir _posts/$date-$permalink/
 sed -E "s/TITLE/$title/;s/DATETIME/$datetime/;s/TAGS/$tags/;s/DESC/$desc/;s/SERIES/$series/" \
-    _posts/template.md > _posts/$date-$permalink.md
+    _posts/template.md > _posts/$date-$permalink/$date-$permalink.md
