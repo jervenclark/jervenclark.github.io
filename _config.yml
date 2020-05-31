@@ -75,6 +75,7 @@ exclude:
   - CODE_OF_CONDUCT.md
   - vendor
   - _posts/template.md
+  - _posts/**/*.sh
 
 # Plugins
 plugins:
