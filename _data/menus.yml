@@ -6,6 +6,10 @@
   url: /about/
   external: false
 
+- title: series
+  url: /series/
+  external: false
+
 - title: notes
   url: /notes/
   external: false

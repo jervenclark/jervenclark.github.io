@@ -17,6 +17,11 @@ layout: compress
                         {% include toc.html html=content %}
                     </div>
                 </div>
+                <div class="sidebar-tag" >
+                    <div class="toc-body">
+                        {% include tags.html html=content %}
+                    </div>
+                </div>
                 <article itemscope itemtype="https://schema.org/BlogPosting">
                     <header class="header">
                         {% if page.tags and page.tags != empty %}

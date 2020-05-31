@@ -3,7 +3,6 @@ title: Basics of Shell Scripting
 date: 2020-05-30 20:34:58 +0800
 modified: 2020-05-30 20:34:58 +0800
 tags: [linux, cli, sh]
-description:
 series: Shell Scripting
 ---
 
@@ -20,7 +19,7 @@ Originally, a **tty** (shorthand for teletypewriter), is a particular kind of de
 One of the major shells used in early UNIX systems was a shell program called **Bourne Shell**. This was developed by Stephen Bourne at Bell Labs in the 1970s. It provided users with a rich set of utilities. It is represented by the dollar `$` command line prompt. In most systems, the Bourne Shell is named **sh** usually found at `/bin/sh` but a number of compatible work-alikes are also provided with varying degrees of added improvements and features. For instance, in my system, the sh program is a symlink to **bash, Bourne Again Shell, which is a superset of the Bourne Shell in terms of functionality.
 
 <figure>
-<img src="/basics-of-shell-scripting/bash.png" alt="Bourne Shell">
+<img src="/assets/img/bash.png" alt="Bourne Shell">
 <figcaption>Fig 1. Terminal emulator, Bourne Again Shell.</figcaption>
 </figure>
 

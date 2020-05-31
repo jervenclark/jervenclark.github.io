@@ -48,11 +48,13 @@ jekyll_compose:
   post_default_front_matter:
     modified:
     tags: []
+    series:
     description:
     archived: false
   draft_default_front_matter:
     modified:
     tags: []
+    series:
     description:
     archived: false
 

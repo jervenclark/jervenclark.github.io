@@ -3,7 +3,6 @@ title: Shell Scripting Constructs
 date: 2020-05-31 08:53:45 +0800
 modified: 2020-05-31 08:53:45 +0800
 tags: [linux, cli, sh]
-description:
 series: Shell Scripting
 ---
 

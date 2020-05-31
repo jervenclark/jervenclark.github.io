@@ -2,7 +2,6 @@
 title: "Memoization"
 date: 2019-10-21 17:40:38 +08:00
 modified: 2019-10-21 17:40:38 +08:00
-tags: [python, optimization]
 description:
 series:
 archived: true

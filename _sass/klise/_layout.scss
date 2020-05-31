@@ -320,31 +320,3 @@
     color: $text-link-blue-active;
   }
 }
-
-// Floating TOC
-.sidebar-toc {
-    display: none;
-    @media only screen and (min-width: $on-widescreen) {
-        border-right: 2px solid $dark-text-link-blue;
-        font-size: 14px;
-        display: block;
-        position: -webkit-sticky;
-        position: sticky;
-        float: left;
-        top: 300px;
-        right: 0;
-        width: 260px;
-        margin-left: -320px;
-        z-index: 10;
-        padding: 0 1em;
-        ul {
-            margin-left: 20px
-        }
-        .toc-header {
-            padding: 0 1.2em .5em;
-            color: #eaeaea;
-            font-weight: 900;
-            font-size: 18px;
-        }
-    }
-}

@@ -2,7 +2,6 @@
 title: "Natural Language Processing on Twitter - Part 1"
 date: 2019-05-13 18:12:28 +08:00
 modified: 2019-05-13 18:12:28 +08:00
-tags: [data-science, pandas, python, nltk, tweepy]
 description:
 series:
 archived: true
