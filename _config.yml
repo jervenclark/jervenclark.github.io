@@ -78,8 +78,9 @@ exclude:
   - node_modules
   - CODE_OF_CONDUCT.md
   - vendor
-  - _posts/template.md
+  - scripts
   - artifacts
+  - _jupyter
 
 # Plugins
 plugins:

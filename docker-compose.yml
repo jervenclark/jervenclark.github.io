@@ -7,3 +7,11 @@ services:
       - 4000:4000
     volumes:
       - ./:/home/developer/workspace
+
+  jupyterlab:
+    image: jervenclark/jupyterlab:latest
+    ports:
+      - 8888:8888
+    volumes:
+      - ./_jupyter:/home/developer/workspace/notebooks
+      - ./assets:/home/developer/workspace/assets

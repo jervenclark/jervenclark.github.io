@@ -1,8 +1,15 @@
 #!/bin/sh
 
-while getopts ":t:a:d:s:" opt; do
+# Defaults
+date=$(date '+%Y-%m-%d')
+time=$(date '+%H:%M:%S %z')
+datetime="$date $time"
+
+# Process arguments
+while getopts ":t:a:d:s:f:" opt; do
     case $opt in
         t) title=$(sed -E 's/(\s+)/ /g' <<< "$OPTARG")
+           permalink=$(sed -E "s/(\s+)/-/g;s/(.*)/\L\1/" <<< $title)
            ;;
         a) tags="$OPTARG"
            ;;
@@ -10,17 +17,23 @@ while getopts ":t:a:d:s:" opt; do
            ;;
         s) series="$OPTARG"
            ;;
+        f) format="$OPTARG"
+           ;;
         \?) echo "Invalid option -$OPTARG" >&2
             ;;
     esac
 done
 
+if [ $format = 'jupyter' ]
+then
+    extension='ipynb'
+    directory='_jupyter'
+else
+    extension='md'
+    directory='_posts/'$date-$permalink/
+    mkdir $directory
+fi
 
-date=$(date '+%Y-%m-%d')
-time=$(date '+%H:%M:%S %z')
-datetime="$date $time"
-permalink=$(sed -E "s/(\s+)/-/g;s/(.*)/\L\1/" <<< $title)
 
-mkdir _posts/$date-$permalink/
 sed -E "s/TITLE/$title/;s/DATETIME/$datetime/;s/TAGS/$tags/;s/DESC/$desc/;s/SERIES/$series/" \
-    _posts/template.md > _posts/$date-$permalink/$date-$permalink.md
+    'scripts/template'.$extension > $directory/$date-$permalink.$extension

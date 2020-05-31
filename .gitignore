@@ -1,5 +1,15 @@
+# Jekyll build artifacts
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+
+# Bundler cache
 vendor
+
+# Jupyter operation artifacts
+**/.virtual_documents/
+**/.ipynb_checkpoints/
+
+# Emacs artifacts
+**/.\#*
