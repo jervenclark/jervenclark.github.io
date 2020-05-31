@@ -4,6 +4,7 @@
 date=$(date '+%Y-%m-%d')
 time=$(date '+%H:%M:%S %z')
 datetime="$date $time"
+format='markdown'
 
 # Process arguments
 while getopts ":t:a:d:s:f:" opt; do
@@ -30,8 +31,7 @@ then
     directory='_jupyter'
 else
     extension='md'
-    directory='_posts/'$date-$permalink/
-    mkdir $directory
+    directory='_posts/'
 fi
 
 

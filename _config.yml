@@ -79,7 +79,7 @@ exclude:
   - CODE_OF_CONDUCT.md
   - vendor
   - scripts
-  - artifacts
+  - _data/artifacts
   - _jupyter
 
 # Plugins
