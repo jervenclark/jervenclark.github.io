@@ -19,7 +19,7 @@ author:
 
 # Url settings
 url: "https://jervenclarkchua.com"
-baseurl: 
+# baseurl: "https://jervenclarkchua.com"
 permalink: /:title/
 google_analytics:
 fb_appid:

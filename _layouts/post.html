@@ -21,7 +21,7 @@ layout: compress
                     <header class="header">
                         {% if page.tags and page.tags != empty %}
                         <div class="tags">
-                            {% assign tags = page.tags %}
+                            {% assign tags = page.tags | sort %}
                             <span itemprop="keywords">
                                 {% for tag in tags %}
                                 <a class="tag"
