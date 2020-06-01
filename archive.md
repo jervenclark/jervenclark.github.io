@@ -9,7 +9,7 @@ comments: false
 {% for post in site.posts %}
 {% if post.archived %}
 <article class="post-item">
-    <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    <span class="post-item-date">{{ post.date | date: "%b %d, %Y - %r" }}</span>
     <h4 class="post-item-title" style="font-size: 16px">
         <a href="{{ post.url }}">{{ post.title | escape }}</a>
     </h4>

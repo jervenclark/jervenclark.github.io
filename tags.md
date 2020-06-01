@@ -12,7 +12,7 @@ excerpt: Sorted article by tags.
 </h4>
 {% for post in site.tags[name] %}
 <article class="posts">
-    <span style="font-size: 14spx">{{ post.date | date: "%b %d" }}
+    <span style="font-size: 14spx">{{ post.date | date: "%b %d, %Y - %r" }}
         <a href="{{ post.url }}">{{ post.title | escape }}</a>
     </span>
 </article>

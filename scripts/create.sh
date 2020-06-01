@@ -34,6 +34,6 @@ else
     directory='_posts/'
 fi
 
-
+mkdir -p assets/img/$permalink
 sed -E "s/TITLE/$title/;s/DATETIME/$datetime/;s/TAGS/$tags/;s/DESC/$desc/;s/SERIES/$series/" \
     'scripts/template'.$extension > $directory/$date-$permalink.$extension
