@@ -2,7 +2,7 @@
 title: Configuring Shell Hooks
 date: 2020-06-03 16:16:51 +0800
 modified: 2020-06-03 16:16:51 +0800
-tags: [linux, config, shell, bash, zsh]
+tags: [linux, config, sh, bash, zsh]
 description: Configuring shell hooks
 series:
 ---
