@@ -4,7 +4,7 @@ services:
   jekyll:
     image: jervenclark/jekyll:latest
     ports:
-      - 4000:4000
+      - 18001:4000
     volumes:
       - ./:/home/developer/workspace
     deploy:
@@ -16,7 +16,7 @@ services:
   jupyterlab:
     image: jervenclark/jupyterlab:latest
     ports:
-      - 8888:8888
+      - 18000:8888
     volumes:
       - ./_jupyter:/home/developer/workspace/notebooks
       - ./assets:/home/developer/workspace/assets
