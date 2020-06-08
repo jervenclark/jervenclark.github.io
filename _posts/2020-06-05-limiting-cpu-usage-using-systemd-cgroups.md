@@ -8,4 +8,4 @@ series:
 ---
 
 
-<script id="asciicast-0S8nrnWeq99n55VkdElmto25Y" src="https://asciinema.org/a/0S8nrnWeq99n55VkdElmto25Y.js" async></script>
+<script id="asciicast-337391" src="https://asciinema.org/a/337391.js" async></script>
