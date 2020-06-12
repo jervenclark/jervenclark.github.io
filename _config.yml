@@ -7,7 +7,8 @@ timezone: Asia/Manila
 image: assets/img/avatar.jpeg # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/jervenclark/jervenclark.github.io
 mode: dark
-
+paginate: 5
+paginate_path: "/page:num/"
 # Profile settings
 author:
   name: Jerven Clark Chua

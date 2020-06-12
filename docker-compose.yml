@@ -12,6 +12,7 @@ services:
         limits:
           memory: 500M
           cpus: '0.25'
+    restart: always
 
   jupyterlab:
     image: jervenclark/jupyterlab:latest
@@ -25,3 +26,4 @@ services:
         limits:
           memory: 200M
           cpus: '0.25'
+    restart: always

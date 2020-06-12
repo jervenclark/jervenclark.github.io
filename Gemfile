@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-sass-converter', '~> 2.1.0'
   gem 'jekyll-compose'
+  gem 'jekyll-paginate'
   gem 'jekyll-postfiles', '~> 3.0'
   gem 'rouge', '~> 3.19'
 end
