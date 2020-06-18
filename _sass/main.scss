@@ -63,7 +63,7 @@ $on-widescreen: 1152px;
 "klise/miscellaneous", "klise/syntax", "klise/dark";
 
 // Import customization files
-@import "custom/layout", "custom/miscellaneous";
+@import "custom/layout", "custom/miscellaneous", "custom/fonts";
 
 .footnotes p {
   display: inline

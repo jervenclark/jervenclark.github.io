@@ -1,0 +1,17 @@
+body[data-theme="dark"] .post-item {
+    .post-item-date {
+        color: #808080;
+        font-weight: 400;
+    }
+
+    .post-item-title a {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .post-item-title a:hover {
+        color: #ff5277;
+    }
+}
+
+
