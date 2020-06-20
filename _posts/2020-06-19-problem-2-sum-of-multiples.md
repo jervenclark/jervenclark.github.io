@@ -37,6 +37,13 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 [e for e in numbers if e % 5 == 0 or e % 3 == 0]
 ```
 
+
+
+
+    [3, 5, 6, 9]
+
+
+
 This gives us the expected `[3, 5, 6, 9]` list of numbers. Putting it all together:
 
 
@@ -49,7 +56,6 @@ def sum_of_multiples(n: int, m: int, numbers: List):
     return sum(multiples)
 ```
 
-**Test**:
 
 ```python
 assert sum_of_multiples(3, 5, [1, 2, 3, 4, 5, 6, 7, 8, 9]) == 23
@@ -66,9 +72,7 @@ def sum_of_multiples2(n: int, m: int, upper_bound: int):
     return sum(multiples)
 ```
 
-**Test**:
 
 ```python
-assert sum_of_multiples2(3, 5, 10) == 23
 assert sum_of_multiples2(3, 5, 1000) == 233168
 ```
