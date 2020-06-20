@@ -1,11 +1,11 @@
 ---
-title: Problem 2 - Sum of Multiples
-date: 2020-06-19 10:14:02 +0800
-modified: 2020-06-19 10:14:02 +0800
-tags: [python, problem, solution]
-description:
-series:
-usemathjax: true
+title       : Problem - Sum of Multiples
+date        : 2020-06-19 10:14:02 +0800
+modified    : 2020-06-19 10:14:02 +0800
+tags        : [python, problem, solution]
+description :
+series      :
+usemathjax  : true
 ---
 
 ## Problem
